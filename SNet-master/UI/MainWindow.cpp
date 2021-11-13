@@ -185,7 +185,7 @@ void MainWindow::on_actionCreateMnDataFile_triggered()
 {
     QString filePath = QFileDialog::getSaveFileName(this,
                                                     "Save MiniNet Script",
-                                                    "C:/Users/nguye/Desktop/SDN_RYU_MININET/topo.py",
+                                                    "../topo.py",
                                                     "Python files (*.py)");
     if (!filePath.isEmpty())
     {
@@ -228,7 +228,7 @@ void MainWindow::on_actionSaveAs_triggered()
 {
     openedFilePath = QFileDialog::getSaveFileName(this,
                                                   "Save topology",
-                                                  "C:/Users/nguye/Desktop/SDN_RYU_MININET/topology.sdn.xml",
+                                                  "../topology.sdn.xml",
                                                   "Xml files (*.xml)");
     if (!openedFilePath.isEmpty())
     {
@@ -254,7 +254,7 @@ void MainWindow::on_actionOpen_triggered()
 {
     openedFilePath = QFileDialog::getOpenFileName(this,
                                                   "Open topology file",
-                                                  "C:/Users/nguye/Desktop/SDN_RYU_MININET/topology.sdn.xml",
+                                                  "../topology.sdn.xml",
                                                   "Xml files (*.xml)");
     if (!openedFilePath.isEmpty())
     {
@@ -284,7 +284,7 @@ void MainWindow::on_actionWeights_Matrix_triggered()
 {
     QString filePath = QFileDialog::getSaveFileName(this,
                                                     "Save Metric Data",
-                                                    "C:/Users/nguye/Desktop/SDN_RYU_MININET/metric_data.txt",
+                                                    "../metric_data.txt",
                                                     "Text files (*.txt)");
     if (!filePath.isEmpty())
     {
@@ -314,7 +314,7 @@ void MainWindow::on_actionCreate_optimal_path_triggered()
 //            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
     bool dk = true;
     QList<QList<int>> paths;
-    QString filename="C:/Users/nguye/Desktop/SDN_RYU_MININET/demo.txt";
+    QString filename="../demo.txt";
         QFile file(filename);
         if(!file.open(QIODevice::ReadOnly)) {
             QMessageBox::information(0, "error", file.errorString());
@@ -356,7 +356,7 @@ void MainWindow::on_actionCreate_optimal_path_triggered()
 
 void MainWindow::on_actionNN_GA_triggered()
 {
-    QString pathss = "C:/Users/nguye/Desktop/SDN_RYU_MININET";
+    QString pathss = "..";
        QString  command("python");
        QStringList params = QStringList() << "12_12.py";
 
@@ -379,7 +379,7 @@ void MainWindow::on_actionRandomMetric_triggered()
 
 void MainWindow::on_actionNN_GA_8_8_8_triggered()
 {
-    QString pathss = "C:/Users/nguye/Desktop/SDN_RYU_MININET";
+    QString pathss = "..";
        QString  command("python");
        QStringList params = QStringList() << "NN_GA_8_8_8.py";
 
@@ -395,7 +395,7 @@ void MainWindow::on_actionNN_GA_8_8_8_triggered()
 
 void MainWindow::on_actionNN_ABC_8_8_8_triggered()
 {
-    QString pathss = "C:/Users/nguye/Desktop/SDN_RYU_MININET";
+    QString pathss = "..";
        QString  command("python");
        QStringList params = QStringList() << "NN_ABC_8_8_8.py";
 
